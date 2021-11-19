@@ -14,19 +14,54 @@ sudo apt install curl -y
 sudo snap install node --classic --channel=16
 sudo apt install build-essential -y
 sudo apt install neofetch -y
+sudo apt install wget -y
+sudo apt install mercurial -y
+sudo apt install screen -y
+
+# installing @vue/cli
+echo "intsalling @vue/cli"
+npm install -g @vue/cli
 
 # installing zsh
+echo "installing zsh"
 sudo apt install zsh -y
 chsh -s /bin/zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # installing zsh plugins
 echo "installing zsh plugins"
-
 mkdir ~/.oh-my-zsh/custom/plugins
 cd ~/.oh-my-zsh/custom/plugins
 git clone git@github.com:zsh-users/zsh-autosuggestions.git
 git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
+
+# Installing gcc-arm compiler
+cd ~
+wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/10-2020q4/gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2
+tar -xf gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2
+mv gcc-arm-none-eabi-10-2020-q4-major gnu-arm-embedded
+rm gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2
+sudo mv gcc-arm-embedded /usr/share
+
+cd /usr/bin/
+
+# Creating sys links
+ln -s /usr/share/gnu-arm-embedded/bin/arm-none-eabi-cpp
+ln -s /usr/share/gnu-arm-embedded/bin/arm-none-eabi-g++
+ln -s /usr/share/gnu-arm-embedded/bin/arm-none-eabi-gcc
+ln -s /usr/share/gnu-arm-embedded/bin/arm-none-eabi-objcopy
+
+# installing conda
+echo "installing conda"
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p $HOME/miniconda
+
+
+# Creating conda env & installing mbed cli
+echo "creating mbed env"
+conda -n create mbed python=3.7.9
+conda activate mbed
+pip install mbed-cli
 
 # The end
 pause "All done - best to reboot after rest is done"
