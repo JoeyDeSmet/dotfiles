@@ -7,6 +7,9 @@
 - link:
     ~/.gitconfig: configs/git/gitconfig
     ~/.bashrc: configs/bash/bashrc
+    ~/.zshrc: configs/zsh/zshrc
+    ~/.oh-my-zsh/custom/aliases.zsh: configs/oh-my-zsh/aliases.zsh
+    ~/.oh-my-zsh/custom/themes/joeys_custom.zsh-theme: configs/oh-my-zsh/themes/joeys_custom.zsh-theme
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
