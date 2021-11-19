@@ -20,7 +20,7 @@ sudo apt install screen -y
 
 # installing @vue/cli
 echo "intsalling @vue/cli"
-npm install -g @vue/cli
+sudo npm install -g @vue/cli -y
 
 # installing zsh
 echo "installing zsh"
