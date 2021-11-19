@@ -13,11 +13,20 @@ sudo apt install snapd -y
 sudo apt install curl -y
 sudo snap install node --classic --channel=16
 sudo apt install build-essential -y
+sudo apt install neofetch -y
 
 # installing zsh
 sudo apt install zsh -y
 chsh -s /bin/zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# installing zsh plugins
+echo "installing zsh plugins"
+
+mkdir ~/.oh-my-zsh/custom/plugins
+cd ~/.oh-my-zsh/custom/plugins
+git clone git@github.com:zsh-users/zsh-autosuggestions.git
+git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
 
 # The end
 pause "All done - best to reboot after rest is done"
