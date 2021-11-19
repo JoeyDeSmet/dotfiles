@@ -59,7 +59,7 @@ rm ~/miniconda.sh
 
 # Creating conda env & installing mbed cli
 echo "creating mbed env"
-conda -n create mbed python=3.7.9
+conda create -n mbed python=3.7.9
 conda activate mbed
 pip install mbed-cli
 
