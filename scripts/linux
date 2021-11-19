@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+function pause() {
+   read -p "$* [ENTER TO CONTINUE]"
+}
+
+pause "Ready to install some tools, libraries, ... for a development machine ?"
+
+# Just add the commands below to start installing tools, dependencies, ...
+sudo apt update
+sudo apt install git -y
+sudo apt install snapd -y
+sudo apt install curl -y
+sudo snap install node --classic --channel=16
+sudo apt install build-essential -y
+
+# The end
+pause "All done - best to reboot after rest is done"
