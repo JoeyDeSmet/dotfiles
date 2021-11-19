@@ -41,7 +41,7 @@ wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/10-2020q4/gcc-arm-
 tar -xf gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2
 mv gcc-arm-none-eabi-10-2020-q4-major gnu-arm-embedded
 rm gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2
-sudo mv gcc-arm-embedded /usr/share/
+sudo mv gnu-arm-embedded /usr/share/
 
 cd /usr/bin/
 
@@ -55,7 +55,7 @@ ln -s /usr/share/gnu-arm-embedded/bin/arm-none-eabi-objcopy
 echo "installing conda"
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
 bash ~/miniconda.sh -b -p $HOME/miniconda3
-
+rm ~/miniconda.sh
 
 # Creating conda env & installing mbed cli
 echo "creating mbed env"
