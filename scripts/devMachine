@@ -46,10 +46,10 @@ sudo mv gnu-arm-embedded /usr/share/
 cd /usr/bin/
 
 # Creating sys links
-ln -s /usr/share/gnu-arm-embedded/bin/arm-none-eabi-cpp
-ln -s /usr/share/gnu-arm-embedded/bin/arm-none-eabi-g++
-ln -s /usr/share/gnu-arm-embedded/bin/arm-none-eabi-gcc
-ln -s /usr/share/gnu-arm-embedded/bin/arm-none-eabi-objcopy
+sudo ln -s /usr/share/gnu-arm-embedded/bin/arm-none-eabi-cpp
+sudo ln -s /usr/share/gnu-arm-embedded/bin/arm-none-eabi-g++
+sudo ln -s /usr/share/gnu-arm-embedded/bin/arm-none-eabi-gcc
+sudo ln -s /usr/share/gnu-arm-embedded/bin/arm-none-eabi-objcopy
 
 # installing conda
 echo "installing conda"
