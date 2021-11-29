@@ -63,5 +63,8 @@ conda create -n mbed python=3.7.9
 conda activate mbed
 pip install mbed-cli
 
+# Installing zsh powerlevel10k theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
 # The end
 pause "All done - best to reboot after rest is done"
