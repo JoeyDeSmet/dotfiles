@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+installPackage () {
+  PACKAGE=$(ls | grep ".pkg.tar.zst")
+  sudo pacman -U ${PACKAGE}
+}
+
+downloadAndMakePKG() {
+  cd /tmp
+  git clone $1
+  DIR=$(echo $1 | sed -E 's/(https:\/\/.+)(.+\/)//' | sed -E 's/.git//')
+  echo $DIR
+  cd $DIR
+  makepkg -s
+}
