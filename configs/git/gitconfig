@@ -1,3 +1,5 @@
 [user]
 	name = Joey
 	email = joey@de-smet.vlaanderen
+[safe]
+	directory = /opt/pico-sdk

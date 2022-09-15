@@ -8,6 +8,7 @@ fi
 USER=$(whoami)
 
 export ZSH="/home/${USER}/.oh-my-zsh"
+export PATH="$HOME/.poetry/bin:$PATH"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -24,9 +25,6 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting extract)
 source $ZSH/oh-my-zsh.sh
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
-
-# schedule shutdown with no terminal output
-shutdown --poweroff 1:00 &> /dev/null
 
 # Initializes NVM
 
@@ -57,3 +55,8 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# To customize prompt, run `p10k configure` or edit ~/dotfiles/configs/oh-my-zsh/p10k.zsh.
+[[ ! -f ~/dotfiles/configs/oh-my-zsh/p10k.zsh ]] || source ~/dotfiles/configs/oh-my-zsh/p10k.zsh
+
+export PATH="$HOME/.poetry/bin:$PATH"
