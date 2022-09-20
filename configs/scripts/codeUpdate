@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-source /usr/bin/functions
-
-echo "Updating vs-code"
-
-downloadAndMakePKG https://AUR.archlinux.org/visual-studio-code-bin.git
-installPackage
-
-echo "Done"
