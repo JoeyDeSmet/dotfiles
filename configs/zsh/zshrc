@@ -13,11 +13,9 @@ export PATH="$HOME/.poetry/bin:$PATH"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 CASE_SENSITIVE="true"
-
 # Uncomment the following line if pasting URLs and other text is messed up.
 DISABLE_MAGIC_FUNCTIONS="true"
 
-#ENABLE_CORRECTION="true"
 
 plugins=(git)
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting extract)
@@ -30,12 +28,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Start neofetch to show system info
-# neofetch
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
