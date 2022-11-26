@@ -13,6 +13,7 @@ sudo apt install curl -y
 sudo apt install wget -y
 sudo apt install screen -y
 sudo apt install wireguard -y
+sudo apt-get install mercurial -y
 sudo apt install build-essential -y
 
 # installing zsh

@@ -4,3 +4,5 @@
 [safe]
 	directory = /opt/pico-sdk
 	directory = /opencv_contrib
+[init]
+	defaultBranch = main
