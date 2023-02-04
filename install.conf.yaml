@@ -9,6 +9,17 @@
     ~/.bashrc: configs/bash/bashrc
     ~/.zshrc: configs/zsh/zshrc
     ~/.p10k.zsh: configs/oh-my-zsh/p10k.zsh
-
+    ~/.config/i3/config:
+       path: configs/i3/config
+       create: true
+    ~/.config/i3/scripts/display.bash:
+        path: configs/i3/scripts/display.bash
+        create: true
+    ~/.config/i3/scripts/audio.bash:
+        path: configs/i3/scripts/audio.bash
+        create: true
+    ~/.config/i3/scripts/.audio_dev:
+        path: configs/i3/scripts/.audio_dev
+        create: true
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

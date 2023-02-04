@@ -48,3 +48,6 @@ unset __conda_setup
 [[ ! -f ~/dotfiles/configs/oh-my-zsh/p10k.zsh ]] || source ~/dotfiles/configs/oh-my-zsh/p10k.zsh
 
 export PATH="$HOME/.poetry/bin:$PATH"
+
+alias vim=nvim
+
