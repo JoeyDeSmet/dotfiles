@@ -15,11 +15,11 @@
     ~/.config/i3/scripts/display.bash:
         path: configs/i3/scripts/display.bash
         create: true
-    ~/.config/i3/scripts/audio.bash:
-        path: configs/i3/scripts/audio.bash
+    ~/.config/nvim:
+        glob: true
         create: true
-    ~/.config/i3/scripts/.audio_dev:
-        path: configs/i3/scripts/.audio_dev
-        create: true
+        path: configs/nvim/**
+
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+
